@@ -3,8 +3,14 @@
   <!-- Head -->
   <head>
       <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <!-- CSRF Token Esto viene de app.blade.php -->
+      <meta name="csrf-token" content="{{ csrf_token() }}">
+
+      <!-- Scripts Esto viene de app.blade.php-->
+      <script src="{{ asset('js/app.js') }}" defer></script>
 
 <!-- Reset -->
 <link rel="stylesheet" href="/css/reset.css">
@@ -187,7 +193,7 @@
 </div>
 
       @yield ("principal")
-      @yield ("login")
+      @yield ("app")
       @yield ("registro")
       @yield ("faq")
 

@@ -31,10 +31,18 @@ Route::get ("/registro",function() {
   return view("registro");
 });*/
 
-Route:: get("/login", function(){
+/*Route:: get("/login", function() {
   return view("login");
-});
+});*/
+
+Route:: get("/login", "LoginController@login"
+  //return view("login");
+);
 
 Route:: get("/faq", function(){
   return view("faq");
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -2,7 +2,7 @@
 @section('titulo')
   Ingresar
 @endsection
-@section ("login")
+@section ("loginlalalala")
 
   <!-- Contenido principal de la página -->
       <main class="row">

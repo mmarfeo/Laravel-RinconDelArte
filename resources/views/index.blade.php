@@ -68,7 +68,8 @@
 </div>
 
 </section>
-</div><!-- Productos -->
+</div>
+<!-- Productos -->
 <section class="col-12 row">
     <div class="products-container col-12 row">
 

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\login;
+use App\Users;
 use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class LoginController extends Controller
      */
     public function index()
     {
-        return view("login");
+        //
     }
 
     /**
@@ -35,27 +35,38 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nuevoUsuario =new Users;
+        $nuevoUsuario->name=$request->name;
+        $nuevoUsuario->apellido=$request->apellido;
+        $nuevoUsuario->username=$request->username;
+        $nuevoUsuario->email=$request->email;
+        $nuevoUsuario->fechaNac=$request->fechaNac;
+        $nuevoUsuario->genero=$request->genero;
+        $nuevoUsuario->foto=$request->foto;
+        $nuevoUsuario->password=password_hash($request->password,PASSWORD_DEFAULT);
+        $nuevoUsuario->password_confirmation=password_hash($request->password_confirmation,PASSWORD_DEFAULT);
+
+        $nuevoUsuario->save();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\login  $login
+     * @param  \App\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function show(login $login)
+    public function show(Users $users)
     {
-        return view("login");
+        //
     }
 
-    /** laldjfiasfoauifuiruiaoufioajdfiojafiojfiojsfaiosdjfiosajiofjioajfioafiafuaio
+    /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\login  $login
+     * @param  \App\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function edit(login $login)
+    public function edit(Users $users)
     {
         //
     }
@@ -64,10 +75,10 @@ class LoginController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\login  $login
+     * @param  \App\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, login $login)
+    public function update(Request $request, Users $users)
     {
         //
     }
@@ -75,10 +86,10 @@ class LoginController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\login  $login
+     * @param  \App\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function destroy(login $login)
+    public function destroy(Users $users)
     {
         //
     }
