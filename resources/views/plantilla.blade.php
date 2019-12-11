@@ -83,7 +83,7 @@
                 </a>
             </li>
             <li class="col-2"><a href="/login">Iniciar sesión</a></li>
-                    <li class="col-2"><a href="/registro">Crear cuenta</a></li>
+                    <li class="col-2"><a href="/register">Crear cuenta</a></li>
         </ul>
     </div>
 </div>
@@ -205,7 +205,7 @@
             <li><a href="/faq">Ayuda</a></li>
 
             <li><a href="/login">Ingresá</a></li>
-                        <li><a href="/registro">Registrate</a></li>
+                        <li><a href="/register">Registrate</a></li>
         </ul>
     </div>
 

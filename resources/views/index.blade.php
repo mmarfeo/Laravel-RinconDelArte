@@ -3,6 +3,7 @@
   Rincon Del Arte
 @endsection
 @section ("principal")
+
   <!-- Contenido principal de la página -->
   <main class="row">
 
@@ -73,6 +74,23 @@
 <section class="col-12 row">
     <div class="products-container col-12 row">
 
+@foreach ($productos as $producto)
+
+
+<article class="col-4">
+    <a href="#" class="col-12"><img src="img/cuadro.jpg" alt=""></a>
+    <h3 class="col-12">{{$producto->NombProducto}}</h3>
+    <p class="col-12">Autor</p>
+    <p class="col-12">Fecha</p>
+    <p class="col-12">Técnica</p>
+    <p class="col-12">Precio</p>
+    <div class="col-8 offset-2 boton">
+        <a href="#" class="link-boton">Agregar al carrito</a>
+    </div>
+</article>
+
+@endforeach
+<!--
 <article class="col-4">
     <a href="#" class="col-12"><img src="img/cuadro.jpg" alt=""></a>
     <h3 class="col-12">Título</h3>
@@ -97,20 +115,9 @@
         <a href="#" class="link-boton">Agregar al carrito</a>
     </div>
 </article>
-
-
-<article class="col-4">
-    <a href="#" class="col-12"><img src="img/cuadro.jpg" alt=""></a>
-    <h3 class="col-12">Título</h3>
-    <p class="col-12">Autor</p>
-    <p class="col-12">Fecha</p>
-    <p class="col-12">Técnica</p>
-    <p class="col-12">Precio</p>
-    <div class="col-8 offset-2 boton">
-        <a href="#" class="link-boton">Agregar al carrito</a>
-    </div>
-</article>
-
+@foreach ($productos as $producto)
+  {{$producto->NomProducto}}
+@endforeach
     </div>
     <div class="products-container col-12 row">
 
@@ -151,7 +158,7 @@
         <a href="#" class="link-boton">Agregar al carrito</a>
     </div>
 </article>
-
+-->
     </div>
 </section>
     </div>
