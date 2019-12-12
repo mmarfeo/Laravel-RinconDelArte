@@ -76,7 +76,6 @@
 
 @foreach ($productos as $producto)
 
-
 <article class="col-4">
     <a href="#" class="col-12"><img src="img/cuadro.jpg" alt=""></a>
     <h3 class="col-12">{{$producto->NombProducto}}</h3>

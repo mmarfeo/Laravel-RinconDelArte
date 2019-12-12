@@ -41,25 +41,25 @@
       <div class="user-nav-wrap">
     <div class="user-nav row">
         <ul class="left-nav col-3 row">
-            <li class="col-2">
+            <li class="col-2 offset-1">
                 <a href="/index">
                     <i class="fas fa-home"></i>
                 </a>
             </li>
-            <li class="col-5">
+  <!--        <li class="col-5">
                 <a href="#">
                     <i class="far fa-envelope"></i>
                     Contactanos
                 </a>
-            </li>
-            <li class="col-4">
+            </li>    -->
+            <li class="col-4 offset-1">
                 <a href="/faq">
                     <i class="far fa-question-circle"></i>
                     Ayuda
                 </a>
             </li>
         </ul>
-        <div class="middle-nav col-2 row">
+  <!--      <div class="middle-nav col-2 row">
             <div class="col-12 envio-gratis">
                 <a href="#">
                     <i class="fas fa-rocket"></i>
@@ -81,8 +81,8 @@
                     <i class="far fa-heart"></i>
                     Lista de deseos
                 </a>
-            </li>
-            <li class="col-2"><a href="/login">Iniciar sesión</a></li>
+            </li> -->
+            <li class="col-2 offset-5"><a href="/login">Iniciar sesión</a></li>
                     <li class="col-2"><a href="/register">Crear cuenta</a></li>
         </ul>
     </div>
@@ -93,15 +93,15 @@
 	<header>
 		<div class="primary-wrap row">
 
-			<div class="brand-wrap col-2">
+			<div class="brand-wrap col-2 offset-5">
                 <h1>
                     <a href="/index">
 						<img src="/img/logo.png" alt="Galería de Arte" class="logo">
 						<!-- Galería de Arte -->
                     </a>
-				</h1>
+				         </h1>
 			</div>
-
+<!--
 			<div class="search-wrap col-10 row">
 				<form method="get" action="#" class="col-10">
 					<div class="header-search-wrap row">
@@ -118,16 +118,17 @@
                 </a>
             </div>
 
-		</div>
+		</div>     -->
 	</header>
 </div>
 
+<!--
 <div class="secondary-header-wrap">
 	<div class="secondary-header row">
         <ul class="col-7 row">
-            <li class="col-3">
+            <li class="col-3">  -->
                 <!-- Desplegable -->
-                <a href="#">
+<!--                <a href="#">
                     Comprar por categoría
                 </a>
             </li>
@@ -180,8 +181,8 @@
 			            </select>
 	                </div>
                 </form>
-            </div>
-            <div class="basket-wrap col-6 row">
+            </div>     -->
+<!--              <div class="basket-wrap col-6 row">
                 <a href="#" class="col-6">
                     <span>137</span>
                     <i class="fas fa-shopping-cart"></i>
@@ -190,7 +191,7 @@
             </div>
         </div>
 	</div>
-</div>
+</div>    -->
 
       @yield ("principal")
       @yield ("app")
