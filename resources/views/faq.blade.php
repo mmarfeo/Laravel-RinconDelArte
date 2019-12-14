@@ -12,41 +12,48 @@
         <h2 class="col-12">Preguntas Frecuentes</h2>
 
         <!-- Preguntas frecuentes -->
-        <ul>
+        <ul >
 
           <!-- Pregunta y respuesta -->
-          <li class="col-12">
+          <li class="col-12 ">
             <h3>¿Cómo puedo comprar?</h3>
             <p>Debe registrarse con e-mail y contraseña. Luego seleccionar la obra y presionar "comprar".</p>
           </li>
 
           <!-- Pregunta y respuesta -->
-          <li class="col-12">
+          <li class="col-12 ">
             <h3>¿Qué medios de pago se aceptan?</h3>
             <ul>
-              <li>
-                <h4>Depósito o transferencia en nuestra cuenta bancaria</h4>
+              <li >
+                <h4 >Depósito o transferencia en nuestra cuenta bancaria</h4>
                 <p>Para el depósito o transferencia bancaria a nuestra cuenta le brindaremos el número de la misma o CBU respectivamente una vez realizada la compra.</p>
               </li>
-              <li>
+            </ul>
+            <ul>
+              <li  >
                 <h4>Tarjeta de crédito</h4>
                 <ul>
-                  <li>Visa</li>
-                  <li>Mastercard</li>
-                  <li>American Express</li>
-                  <li>Cabal</li>
-                  <li>Tarjeta Naranja</li>
-                </ul>
+                  <ol>Visa</ol>
+                  <ol>Mastercard</ol>
+                  <ol>American Express</ol>
+                  <ol>Cabal</ol>
+                  <ol>Tarjeta Naranja</ol>
+
               </li>
-              <li>
+            </ul>
+            <ul>
+
+
+              <li >
                 <h4>Otros medios de pago</h4>
                 <ul>
-                  <li>Pago Fácil</li>
-                  <li>Rapipago</li>
-                  <li>MercadoPago</li>
+                  <ol  >Pago Fácil</ol>
+                  <ol  >Rapipago</ol>
+                  <ol  >MercadoPago</ol>
                 </ul>
                 <p>Usted podrá abonar el importe de su compra con un cupón de pago que le enviaremos por e-mail en cualquiera de las sucursales de Pago Fácil, Rapipago.</p>
               </li>
+              </ul>
             </ul>
           </li>
 

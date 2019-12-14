@@ -9,19 +9,18 @@
 
     <!-- Barra lateral -->
     <section class="col-2 sidebar">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
-</section>
+
+
+
+
+
+
+      dfghjkllkjhgfdfghjklkjhgfghjkkjhgfghjkkjhgfghjkjhgfghjkjhgf
+      <img src="" alt="">
+
+    </section>
     <div class="main-content col-10 row">
 
       <!-- Carousel -->
@@ -74,21 +73,22 @@
 <section class="col-12 row">
     <div class="products-container col-12 row">
 
-@foreach ($productos as $producto)
+@forelse ($productos as $producto)
+{{--{{dd($productos)}};--}}
 
 <article class="col-4">
-    <a href="#" class="col-12"><img src="img/cuadro.jpg" alt=""></a>
-    <h3 class="col-12">{{$producto->NombProducto}}</h3>
-    <p class="col-12">Autor</p>
-    <p class="col-12">Fecha</p>
-    <p class="col-12">Técnica</p>
-    <p class="col-12">Precio</p>
+    <a href="#" class="col-12"><img src={{$producto->img }} alt=""></a>
+    <p class="col-12">Nombre: {{$producto->name ?? ''}}</p>
+    <p class="col-12">Descripción: {{$producto->desc ?? ''}}</p>
+    <p class="col-12">Precio: ${{$producto->price ?? ''}}</p>
+    <!--<p class="col-12">Técnica</p>
+    <p class="col-12">Precio</p>-->
     <div class="col-8 offset-2 boton">
         <a href="#" class="link-boton">Agregar al carrito</a>
     </div>
 </article>
-
-@endforeach
+@empty
+@endforelse
 <!--
 <article class="col-4">
     <a href="#" class="col-12"><img src="img/cuadro.jpg" alt=""></a>
@@ -114,9 +114,9 @@
         <a href="#" class="link-boton">Agregar al carrito</a>
     </div>
 </article>
-@foreach ($productos as $producto)
+{{--@forelse ($productos as $producto)
   {{$producto->NomProducto}}
-@endforeach
+@endforelse--}}
     </div>
     <div class="products-container col-12 row">
 

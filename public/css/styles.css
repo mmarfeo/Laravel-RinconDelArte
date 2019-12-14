@@ -106,7 +106,7 @@ p, label, a, input {
 .user-nav-wrap a, .user-nav-wrap span {
     /* color: #FFF6E8; */
     color: #EAE3E3;
-    font-size: 18px;
+    font-size: 27px;
 }
 
 .busqueda-avanzada {
@@ -391,4 +391,15 @@ input {
     font-weight: bold;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+
+
+p.preguntas {
+  display: inline-block;
+}
+
+ol .lista{
+  list-style-type: circle !important;
+
 }

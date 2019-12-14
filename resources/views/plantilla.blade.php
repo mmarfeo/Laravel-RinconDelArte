@@ -201,16 +201,9 @@
       <!-- Footer -->
       <footer class="row">
 
-    <div class="col-5 footer-nav">
-        <ul>
-            <li><a href="/faq">Ayuda</a></li>
 
-            <li><a href="/login">Ingresá</a></li>
-                        <li><a href="/register">Registrate</a></li>
-        </ul>
-    </div>
 
-    <div class="col-2 offset-4 redes-sociales">
+    <div class="col-2 offset-5 redes-sociales">
         <ul>
         <li><a href="https://facebook.com/" target="_blank" class="fab fa-facebook"></a></li>
         <li><a href="https://instagram.com/" target="_blank" class="fab fa-instagram"></a></li>
@@ -218,6 +211,16 @@
         <li><a href="https://pinterest.com/" target="_blank" class="fab fa-pinterest"></a></li>
         </ul>
     </div>
+
+    <div class="col-2 offset-3 footer-nav">
+        <ul>
+            <li><a href="/faq">Ayuda</a></li>
+
+      <!--  <li><a href="/login">Ingresá</a></li>
+            <li><a href="/register">Registrate</a></li> -->
+        </ul>
+    </div>
+
 
 </footer>
     </div>
