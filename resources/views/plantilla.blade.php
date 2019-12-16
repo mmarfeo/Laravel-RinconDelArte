@@ -32,7 +32,7 @@
   </head>
 
   <!-- Body -->
-  <body>
+  <body >
 
     <!-- Contenedor de Bootstrap -->
     <div class="container-fluid">

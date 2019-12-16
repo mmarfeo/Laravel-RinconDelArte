@@ -6,34 +6,28 @@
 
 @section("main")
   <h1>Mi carrito</h1>
-  @if (Auth::user() -> productInCart () ->isNotEmpty())
+  @if (Auth::user() -> productsInCart () ->isNotEmpty())
       <table class="table table-sm">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col"></th>
+            <th scope="col">Cuadro</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Acciones</th>
           </tr>
         </thead>
         <tbody>
+          @foreach (Auth::user() -> productsInCart as $productInCart ())
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th>
+              {{--img es un dato de la columna img de la tabla product, el alt es la descpricion de la imagen aca seria name--}}
+              {{-- <img src="{{productInCart->product->img}}" alt="{{productInCart->product->name}}"> --}}
+            </th>
+            {{-- <td>{{productInCart->product->name}}</td>
+            <td>{{productInCart->product->price}}</td>
+            <td>{{productInCart->product->price}}</td> --}}
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+        @endforeach
         </tbody>
       </table>
   @else
@@ -47,7 +41,7 @@
 
 
 
-
+{{--
 <html lang="es">
 
   <!-- Head -->
@@ -109,7 +103,7 @@
                   <span class="navbar-toggler-icon"></span>
               </button> --}}
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              {{-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <!-- Left Side Of Navbar -->
                   <ul class="navbar-nav mr-auto">
 
@@ -131,8 +125,8 @@
                       @else
                           <li class="nav-item dropdown">
                               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                  {{--hola xxxx--}}{{ Auth::user()->name }} <span class="caret"></span>
-                              </a>
+                                  {{--hola xxxx--}}{{--{{ Auth::user()->name }}--}} <!--<span class="caret"></span>
+                              {{-- </a>
 
                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
@@ -143,23 +137,23 @@
                                                    document.getElementById('logout-form').submit();">
                                       {{ __('Cerrar sesion') }}
                                   </a>
+ --}}
 
-
-                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                      @csrf
+                                  {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> --}}
+                                      {{-- @csrf
                                   </form>
                               </div>
                           </li>
                       @endguest
                   </ul>
               </div>
-          </div>
-      </nav>
+          </div> --}}
+      {{-- </nav> --}} --}}
 
       {{-- <main class="py-4">
           @yield('content')
       </main> --}}
-  </div>
+  {{-- </div>
 
     <br>
     <br>
@@ -171,4 +165,4 @@
 <footer class="row">
 
 
-</footer>
+</footer> --}} --}}
