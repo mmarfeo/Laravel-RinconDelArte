@@ -4,9 +4,24 @@ namespace App\Http\Controllers;
 
 use App\cart;
 use Illuminate\Http\Request;
+use App\ProductInCart;
+use Auth;
 
 class CartController extends Controller
 {
+  //El productId viene de la ruta previa que se creo
+  public function addProduct (Request $req, $produtId) {
+    $productInCart = new ProductInCart ();
+    $productInCart-> product_id = $productId;
+    $productInCart-> user_id = Auth::id();
+
+    $productInCart-> save();
+
+    return redirect()->route("cart");
+
+  }
+
+
     /**
      * Display a listing of the resource.
      *

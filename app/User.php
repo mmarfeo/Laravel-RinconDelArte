@@ -38,4 +38,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //Esto es para decir, los usuarios tienen algunos productos en el carrito
+    public function productsInCart () {
+      //tiene muchos del modelo ProductInCart
+      return $this->hasMany("App\ProductInCart");
+
+    }
+    
 }

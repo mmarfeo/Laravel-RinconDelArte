@@ -28,7 +28,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300|Shadows+Into+Light&display=swap" rel="stylesheet">
 
 <!-- CSS -->
-<link rel="stylesheet" href="/css/styles.css ">      <title>Administrador</title>
+<link rel="stylesheet" href="/css/styles.css ">      <title>Carrito</title>
   </head>
 
 </head>

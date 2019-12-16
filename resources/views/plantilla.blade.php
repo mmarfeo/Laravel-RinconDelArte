@@ -52,7 +52,7 @@
                     Contactanos
                 </a>
             </li>    -->
-            <li class="col-4 offset-1">
+            <li class="col-5 offset-1">
                 <a href="/faq">
                     <i class="far fa-question-circle"></i>
                     Ayuda
@@ -82,8 +82,13 @@
                     Lista de deseos
                 </a>
             </li> -->
-            <li class="col-2 offset-5"><a href="/login">Iniciar sesión</a></li>
-                    <li class="col-2"><a href="/register">Crear cuenta</a></li>
+            <li class="col-1 offset-6"><a href="/login">Iniciar sesión</a></li>
+            <li class="col-1"><a href="/register">Crear cuenta</a></li>
+            <li class="col-1"><a href="/cart">Carrito</a>
+                <a href="/cart" class="col-6">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
@@ -212,14 +217,14 @@
         </ul>
     </div>
 
-    <div class="col-2 offset-3 footer-nav">
+    {{-- <div class="col-2 offset-3 footer-nav">
         <ul>
             <li><a href="/faq">Ayuda</a></li>
 
       <!--  <li><a href="/login">Ingresá</a></li>
             <li><a href="/register">Registrate</a></li> -->
         </ul>
-    </div>
+    </div> --}}
 
 
 </footer>

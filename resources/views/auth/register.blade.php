@@ -69,37 +69,38 @@
                         </div>
 
 <!--Fecha de nacimiento - Se copio de name y se modificaron algunos campos-->
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <label for="fechaNac" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento') }}</label>
                             <div class="col-md-6">
-                                <input id="fechaNac" type="date" class="form-control @error('fechaNac') is-invalid @enderror" name="fechaNac" value="{{ old('fechaNac') }}" required autocomplete="fechaNac" autofocus>
+                                <input id="fechaNac" type="date" class="form-control @error('fechaNac') is-invalid @enderror" name="fechaNac" value="{{ old('fechaNac') }}"  autocomplete="fechaNac" autofocus>
                                 @error('fechaNac')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
 
 <!--Genero - Se copio de name y se modificaron algunos campos-->
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <label for="genero" class="col-md-4 col-form-label text-md-right">{{ __('Género') }}</label>
                             <div class="col-md-2">
-                                <input id="genero" type="radio" class="form-control @error('genero') is-invalid @enderror" name="genero" value="{{ old('Hombre') }}" required autocomplete="genero" autofocus> Hombre
-                                <input id="genero" type="radio" class="form-control @error('genero') is-invalid @enderror" name="genero" value="{{ old('Mujer') }}" required autocomplete="genero" autofocus> Mujer
+                                <input id="genero" type="radio" class="form-control @error('genero') is-invalid @enderror" name="genero" value="{{ old('Hombre') }}"  autocomplete="genero" autofocus> Hombre
+                                <input id="genero" type="radio" class="form-control @error('genero') is-invalid @enderror" name="genero" value="{{ old('Mujer') }}"  autocomplete="genero" autofocus> Mujer
+                                <input id="genero" type="radio" class="form-control @error('genero') is-invalid @enderror" name="genero" value="{{ old('Otro') }}"  autocomplete="genero" autofocus> Otro
                                 @error('genero')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
 
 <!--Foto de Perfil - Se copio de name y se modificaron algunos campos-->
                         <div class="form-group row">
                             <label for="foto" class="col-md-4 col-form-label text-md-right">{{ __('Foto de Perfil') }}</label>
                             <div class="col-md-6">
-                                <input id="foto" type="file" class="form-control @error('foto') is-invalid @enderror" name="foto" value="{{ old('foto') }}" required autocomplete="foto" autofocus>
+                                <input id="foto" type="file" class="form-control @error('foto') is-invalid @enderror" name="foto" value="{{ old('foto') }}"  autocomplete="foto" autofocus>
                                 @error('foto')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

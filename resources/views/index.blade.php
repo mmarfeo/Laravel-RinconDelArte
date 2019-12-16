@@ -17,8 +17,8 @@
 
 
 
-      dfghjkllkjhgfdfghjklkjhgfghjkkjhgfghjkkjhgfghjkjhgfghjkjhgf
-      <img src="" alt="">
+
+      <img class="arte" src="img/arte-6.jpeg" alt="">
 
     </section>
     <div class="main-content col-10 row">
@@ -74,7 +74,7 @@
     <div class="products-container col-12 row">
 
 @forelse ($productos as $producto)
-{{--{{dd($productos)}};--}}
+{{--{{dd($productos ?? '')}};--}}
 
 <article class="col-4">
     <a href="#" class="col-12"><img src={{$producto->img }} alt=""></a>
@@ -114,7 +114,7 @@
         <a href="#" class="link-boton">Agregar al carrito</a>
     </div>
 </article>
-{{--@forelse ($productos as $producto)
+{{--@forelse ($productos ?? '' as $producto)
   {{$producto->NomProducto}}
 @endforelse--}}
     </div>

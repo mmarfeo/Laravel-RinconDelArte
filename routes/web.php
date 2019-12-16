@@ -52,3 +52,11 @@ Route::get('/index','productController@index');
 Route::get("/admin", function(){
   return view("admin");
 });
+//Es muy importante el orden de las rutas, ya que puede entrar primero a una y luego a otra
+//En este caso le ponemos view porque queremos que sea una vista, y ese es el segundo parametro
+// el nombre de la vista "cart", el primero es la ruta "/cart", el middleware("auth"), es para
+// que solo ingresen quienes estan logueados.
+Route::view("/cart", "cart")->name ("cart")->middleware("auth");
+
+
+Route::post('/cart/{productId}', 'CartController@addProduct')->name('addProductToCart');

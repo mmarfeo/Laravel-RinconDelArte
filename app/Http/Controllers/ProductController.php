@@ -26,7 +26,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        return view('product.create');
     }
 
     /**
@@ -37,7 +37,27 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->validate($request,[
+         "name" => "required|string|min:3",
+         "price" => "required|numeric",
+         "description" => "required|max:280",
+         "img" => "required|mimes:jpeg,jpg,png,gif|max:10000",
+     ],[
+         "required" => "El campo es obligatorio.",
+         "numeric" => "Debe ingresar números.",
+         "max" => "La imagen no puede superar los 10 MB.",
+         "mines" => "El formato de la imagen debe ser jpeg,jpg,png,gif."
+     ]);
+
+     $nuevoProducto = new Product;
+     $nuevoProducto->name = $request->name;
+     $nuevoProducto->price = $request->price;
+     $nuevoProducto->description = $request->description;
+     $nuevoProducto->img= $request->img;
+
+     $nuevoProducto->save();
+
+     return redirect("/");
     }
 
     /**
@@ -59,7 +79,8 @@ class ProductController extends Controller
      */
     public function edit(product $product)
     {
-        //
+      $products = Product::find($id);
+       return view('products.edit',compact('products'));
     }
 
     /**
@@ -71,7 +92,27 @@ class ProductController extends Controller
      */
     public function update(Request $request, product $product)
     {
-        //
+      $this->validate($request,[
+          "name" => "required|string|min:3",
+          "price" => "required|numeric",
+          "description" => "required|max:280",
+          "img" => "required|mimes:jpeg,jpg,png,gif|max:10000",
+      ],[
+          "required" => "El campo es obligatorio.",
+          "price" => "Debe ingresar números.",
+          "max" => "La imagen no puede superar los 10 MB.",
+          "mines" => "El formato de la imagen debe ser jpeg,jpg,png,gif."
+      ]);
+
+      $nuevoProducto = new Product;
+      $nuevoProducto->name = $request->name;
+      $nuevoProducto->price = $request->price;
+      $nuevoProducto->description = $request->description;
+      $nuevoProducto->img = $request->img;
+
+      $nuevoProducto->save();
+
+      return redirect("/");
     }
 
     /**
