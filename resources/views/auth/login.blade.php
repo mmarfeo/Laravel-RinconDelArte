@@ -51,9 +51,10 @@
                             </div>
                         </div>
 
+                        {{--Le saque al boton la clase -primary que es la que le da el color azul cuando se cliquea, viene por defecto en laravel--}}
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary searchButton">
+                                <button type="submit" class="btn btn searchButton">
                                     {{ __('Ingresar') }}
                                 </button>
 

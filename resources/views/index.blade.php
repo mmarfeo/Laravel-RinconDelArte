@@ -79,12 +79,13 @@
 <article class="col-4">
     <a href="#" class="col-12"><img src={{$product->img }} alt=""></a>
     <p class="col-12">Nombre: {{$product->name ?? ''}}</p>
-    <p class="col-12">Descripción: {{$product->desc ?? ''}}</p>
-    <p class="col-12">Precio: ${{$product->price ?? ''}}</p>
+    <p class="col-12">Descripción: {{$product->desc}}</p>
+    <p class="col-12">Precio: ${{$product->price }}</p>
     <!--<p class="col-12">Técnica</p>
     <p class="col-12">Precio</p>-->
     @guest
-      <a href="{{ route('login') }}" class="link-boton">Agregar al carrito</a>
+      {{--Le saque al boton la clase -primary que es la que le da el color azul cuando se cliquea, viene por defecto en laravel--}}
+      <a href="{{ route('login') }}" class="btn btn boton col-7 offset-3">Agregar al carrito</a>
     @else
       {{--El ['productId' => $product->id] es un parametro requerido que le pedi a la route del addProduct --}}
       <form action="{{ route('addProductToCart', ['productId' => $product->id]) }}" method="post">
@@ -119,7 +120,7 @@
           <br />
           <button type="submit" class="link-boton">Agregar al carrito</button>
         </form> --}}
-      {{-- @endguest --}} --}}
+      {{-- @endguest --}}
 
 
 

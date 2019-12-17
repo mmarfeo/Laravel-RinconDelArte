@@ -373,6 +373,7 @@ input {
       color: #FFF6E8;
   }
 
+
 .link-boton:hover {
     color: #FFF6E8;
 }
@@ -417,4 +418,9 @@ ol .lista{
 .arte{
   height: 100%;
   weight: 100%;
+}
+
+
+.searchButton{
+  color: #FFF6E8 !important;
 }

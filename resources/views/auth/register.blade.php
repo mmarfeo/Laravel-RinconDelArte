@@ -133,7 +133,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary boton">
+                                {{--Le saque al boton la clase -primary que es la que le da el color azul cuando se cliquea, viene por defecto en laravel--}}
+                                <button type="submit" class="btn btn boton">
                                     {{ __('Crear Cuenta') }}
                                 </button>
                             </div>
