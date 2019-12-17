@@ -1,4 +1,4 @@
-@extends ("layout")
+@extends ("plantilla")
 
 @section("title")
   Mis carrito de compras

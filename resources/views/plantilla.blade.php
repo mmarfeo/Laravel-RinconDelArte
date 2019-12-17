@@ -199,6 +199,7 @@
 </div>    -->
 
       @yield ("principal")
+      {{-- @yield ("product") --}}
       @yield ("app")
       @yield ("registro")
       @yield ("faq")

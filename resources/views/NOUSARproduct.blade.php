@@ -1,5 +1,4 @@
-@extends('layout')
-
+@extends('platilla')
 
 @section('title')
   {{$product->name}} - Reebok Argentina - Tienda Online - Be More Human
@@ -15,6 +14,7 @@
         <h1>{{ $product->name }}</h1>
       </div>
     </div>
+
     <div class="row">
       <div class="col-12 col-lg-6">
         <img src="{{ $product->imageUrl }}" alt="{{ $product->name }}" />

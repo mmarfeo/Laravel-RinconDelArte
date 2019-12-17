@@ -52,7 +52,9 @@
 <br>
 
 
-<form method="get" action="/admin" enctype="multipart/form-data" class="row col-12">
+
+
+<form method="post" action="/cart" enctype="multipart/form-data" class="row col-12">
                         @csrf
                         <!-- Nombre -->
                         <div class="input-container col-4 offset-4">
@@ -85,7 +87,14 @@
                         <!-- Foto de perfil -->
                         <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                           <label for="cuadro" class="w-100">Cuadro</label>
-                          <input class="w-100" type="file" name="cuadro" id="cuadro">
+                          <input class="w-100" type="file" name="img" id="cuadro">
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="col-4 offset-4 boton">
+                            {{-- <a href="{{route('admin')}}" class="link-boton">Cargar producto</a> --}}
+                            <button type="submit"  name="button">Cargar producto</button>
                         </div>
 
                     </form>
@@ -93,7 +102,6 @@
                     <br>
 
 <footer class="row">
-
 
 </footer>
 

@@ -11,12 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 //2 paso se creo la ruta para que busque el archivo index en la carpeta views
+use App\product;
 Route::get ("/",function() {
-  return view("index");
+  $products = product::all();
+  return view("index",compact('products'));
 });
 
 Route::get ("/index",function() {
@@ -52,6 +54,9 @@ Route::get('/index','productController@index');
 Route::get("/admin", function(){
   return view("admin");
 });
+
+Route::post("/cart", 'productController@store');
+
 //Es muy importante el orden de las rutas, ya que puede entrar primero a una y luego a otra
 //En este caso le ponemos view porque queremos que sea una vista, y ese es el segundo parametro
 // el nombre de la vista "cart", el primero es la ruta "/cart", el middleware("auth"), es para
