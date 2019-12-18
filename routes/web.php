@@ -65,3 +65,13 @@ Route::view("/cart", "cart")->name ("cart")->middleware("auth");
 
 
 Route::post('/cart/{productId}', 'CartController@addProduct')->name('addProductToCart');
+
+//mostrar formulario de creacion de usuario
+Route::get('/users/create', 'UserController@create');
+//Guardar un nuevo usuario
+Route::post('/users/create', 'UserController@store');
+
+//mostrar formulario de edicion de usuario
+Route::get('/users/edit/{}', 'UserController@edit');
+Route::post('/users/edit/{}', 'UserController@update');
+

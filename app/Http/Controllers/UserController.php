@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UserController extends Controller
 {
@@ -23,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -34,7 +35,26 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $this->validate($request,[
+            "name"=>"required",
+            "email"=>"required|email|unique:users",
+            "password"=>"required|same:confirm_password"
+        ],[
+            "name.required" =>"El nombre es obligatorio",
+            "email.required" =>"El email es obligatorio",
+            "password.required" =>"La password es obligatoria"
+        ]);
+
+        $nuevoUsuario = new User;
+        $nuevoUsuario->name = $request->name;
+        $nuevoUsuario->email = $request->email;
+        $nuevoUsuario->password = pasword_hash($request->password, PASSWORD DEFAULT);
+
+        $nuevoUsuario->save();
+
+        return redirect ("/home");
+
     }
 
     /**
@@ -56,7 +76,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $usuario = User::find($id);
+
+        return view('users.edit', compact('usuario'));
     }
 
     /**
@@ -68,7 +90,20 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            "name"=> "required|min:2|alpha"
+        ][
+            "required" => "Coloque su nombre",
+            "min"=> "Como minimo dos caracteres",
+            "string"=> "Recuerde que tiene que ser un texto" 
+        ]);
+
+        $usuarioAEditar = User::find($id);
+        $usuarioAEditar->name =$request->name;
+        $usuarioAEditar-> save();
+
+        return redirect(/home);
+
     }
 
     /**
@@ -79,6 +114,11 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Necesito hacer la columna de activo en BD y editar esa columna entre 1 y 0
+        
+        //$usuarioAEliminar = User::find($id);
+        //$usuarioAEliminar->delete();
+
+        //return redirect(/home);
     }
 }
