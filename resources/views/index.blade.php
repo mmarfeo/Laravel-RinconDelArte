@@ -73,12 +73,12 @@
 <section class="col-12 row">
     <div class="products-container col-12 row">
 
+
 @forelse ($products as $product)
-{{--{{dd($productos ?? '')}};--}}
 
 <article class="col-4">
-    <a href="#" class="col-12"><img src={{$product->img }} alt=""></a>
-    <p class="col-12">Nombre: {{$product->name ?? ''}}</p>
+    <a href="#" class="col-12"><img src="/storage/products/{{$product->img }}" alt=""></a>
+    <p class="col-12">Nombre: {{$product->name}}</p>
     <p class="col-12">Descripción: {{$product->desc}}</p>
     <p class="col-12">Precio: ${{$product->price }}</p>
     <!--<p class="col-12">Técnica</p>

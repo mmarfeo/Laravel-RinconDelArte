@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\product;
+use App\products;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class productsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-      $products = product::all();
-
+      $products = products::all();
       return view('index',compact('products'));
+    }
+
+    public function cargaDeProductos(Request $r){
+        dd($r);
     }
 
     /**
@@ -51,7 +54,7 @@ class ProductController extends Controller
      ]);
 
      $rutaimg = $request->file("img")->store("products");
-     $nuevoProducto = new product;
+     $nuevoProducto = new products;
      $nuevoProducto->name = $request->name;
      $nuevoProducto->price = $request->price;
      $nuevoProducto->desc = $request->desc;
@@ -123,7 +126,7 @@ class ProductController extends Controller
      * @param  \App\product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(product $product)
+    public function destroy(product $products)
     {
         //
     }

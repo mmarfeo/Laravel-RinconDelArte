@@ -82,7 +82,7 @@
                     Lista de deseos
                 </a>
             </li> -->
-            @guest
+            
             <li class="col-1 offset-6"><a href="/login">Iniciar sesión</a></li>
             <li class="col-1"><a href="/register">Crear cuenta</a></li>
             <li class="col-1"><a href="/cart">Carrito</a>
@@ -220,18 +220,18 @@
         </ul>
     </div>
 
-    {{-- <div class="col-2 offset-3 footer-nav">
+    <!-- <div class="col-2 offset-3 footer-nav">
         <ul>
             <li><a href="/faq">Ayuda</a></li>
 
-      <!--  <li><a href="/login">Ingresá</a></li>
-            <li><a href="/register">Registrate</a></li> -->
+            <li><a href="/login">Ingresá</a></li>
+            <li><a href="/register">Registrate</a></li>
         </ul>
-    </div> --}}
+    </div>-->
 
 
 </footer>
-    </div>
+   
   </body>
 
 </html>

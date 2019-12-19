@@ -49,7 +49,7 @@ class UserController extends Controller
         $nuevoUsuario = new User;
         $nuevoUsuario->name = $request->name;
         $nuevoUsuario->email = $request->email;
-        $nuevoUsuario->password = pasword_hash($request->password, PASSWORD_DEFAULT);
+        $nuevoUsuario->password = password_hash($request->password, PASSWORD_DEFAULT);
 
         $nuevoUsuario->save();
         
@@ -92,6 +92,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        dd($request);
         $this->validate($request,[
             "name"=> "required|min:2|alpha"
         ],[

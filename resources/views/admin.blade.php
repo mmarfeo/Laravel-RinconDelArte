@@ -54,7 +54,7 @@
 
 
 
-<form method="post" action="/cart" enctype="multipart/form-data" class="row col-12">
+<form method="post" action="/index" enctype="multipart/form-data" class="row col-12">
                         @csrf
                         <!-- Nombre -->
                         <div class="input-container col-4 offset-4">
@@ -95,6 +95,8 @@
                         <div class="col-4 offset-4 boton">
                             {{-- <a href="{{route('admin')}}" class="link-boton">Cargar producto</a> --}}
                             <button type="submit"  name="button">Cargar producto</button>
+                            <a href="/" class="link-boton">Home</a>
+                            
                         </div>
 
                     </form>
