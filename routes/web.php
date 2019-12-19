@@ -72,6 +72,10 @@ Route::get('/users/create', 'UserController@create');
 Route::post('/users/create', 'UserController@store');
 
 //mostrar formulario de edicion de usuario
-Route::get('/users/edit/{}', 'UserController@edit');
-Route::post('/users/edit/{}', 'UserController@update');
+Route::get('/users/edit', 'UserController@edit');
+Route::post('/users/edit', 'UserController@update');
+
+//ruta para editar perfil que lleva a una nueva vista de edicion
+Route::get('/edit', 'UserController@edit')->middleware("auth");
+Route::post('/edit', 'UserController@update');
 

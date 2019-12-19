@@ -49,11 +49,13 @@ class UserController extends Controller
         $nuevoUsuario = new User;
         $nuevoUsuario->name = $request->name;
         $nuevoUsuario->email = $request->email;
-        $nuevoUsuario->password = pasword_hash($request->password, PASSWORD DEFAULT);
+        $nuevoUsuario->password = pasword_hash($request->password, PASSWORD_DEFAULT);
 
         $nuevoUsuario->save();
+        
+        return redirect ("/index");
 
-        return redirect ("/home");
+
 
     }
 
@@ -74,11 +76,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        $usuario = User::find($id);
+        //$usuario = User::find($id);
 
-        return view('users.edit', compact('usuario'));
+        return view('edit');
     }
 
     /**
@@ -92,7 +94,7 @@ class UserController extends Controller
     {
         $this->validate($request,[
             "name"=> "required|min:2|alpha"
-        ][
+        ],[
             "required" => "Coloque su nombre",
             "min"=> "Como minimo dos caracteres",
             "string"=> "Recuerde que tiene que ser un texto" 
@@ -102,7 +104,7 @@ class UserController extends Controller
         $usuarioAEditar->name =$request->name;
         $usuarioAEditar-> save();
 
-        return redirect(/home);
+        return redirect('/index');
 
     }
 
@@ -114,11 +116,11 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //Necesito hacer la columna de activo en BD y editar esa columna entre 1 y 0
-        
-        //$usuarioAEliminar = User::find($id);
-        //$usuarioAEliminar->delete();
+        $usuarioAEliminar = User::find($id);
+        $usuarioAEliminar->delete();
 
-        //return redirect(/home);
+        return redirect('/index');
+
+        //Necesito hacer la columna de activo en BD y editar esa columna entre 1 y 0
     }
 }

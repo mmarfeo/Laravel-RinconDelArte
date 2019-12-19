@@ -82,6 +82,7 @@
                     Lista de deseos
                 </a>
             </li> -->
+            @guest
             <li class="col-1 offset-6"><a href="/login">Iniciar sesión</a></li>
             <li class="col-1"><a href="/register">Crear cuenta</a></li>
             <li class="col-1"><a href="/cart">Carrito</a>
@@ -203,6 +204,7 @@
       @yield ("app")
       @yield ("registro")
       @yield ("faq")
+      @yield ("edit")
 
       <!-- Footer -->
       <footer class="row">
